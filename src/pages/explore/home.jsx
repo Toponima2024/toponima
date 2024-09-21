@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import {
   Typography,
   Card,
@@ -26,9 +27,27 @@ import {
   ordersOverviewData,
 } from "@/data";
 import { CheckCircleIcon, ClockIcon } from "@heroicons/react/24/solid";
+
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../fb";
         
 
 export function Home() {
+
+  const fetchPost = async () => {      
+    await getDocs(collection(db, "collections"))
+      .then((querySnapshot)=>{               
+        const newData = querySnapshot.docs
+          .map((doc) => ({...doc.data(), id:doc.id }));
+        console.log('Data',newData);
+      })
+  }
+
+  useEffect(()=>{
+    fetchPost();
+    
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <div className="container mx-auto">      
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
