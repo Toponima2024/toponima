@@ -8,7 +8,8 @@ import {
 } from "@heroicons/react/24/solid";
 import { Home, Profile, Tables, Notifications } from "@/pages/explore";
 import { SignIn, SignUp } from "@/pages/auth";
-import { HomeCollection } from "./pages/collections";
+import { HomeCollection } from "@/pages/collections";
+import { HomeAbout } from "@/pages/about";
 
 const icon = {
   className: "w-5 h-5 text-inherit",
@@ -70,6 +71,17 @@ export const routes = [
         name: "collections",
         path: "/home",
         element: <HomeCollection />,
+      },
+    ],
+  },
+  {
+    layout: "about",
+    pages: [
+      {
+        icon: <HomeIcon {...icon} />,
+        name: "about",
+        path: "/home",
+        element: <HomeAbout />,
       },
     ],
   },

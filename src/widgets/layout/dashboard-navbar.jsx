@@ -35,7 +35,7 @@ export function DashboardNavbar() {
       color={fixedNavbar ? "white" : "transparent"}
       className={`transition-all ${
         fixedNavbar
-          ? "sticky top-0 z-40 py-3 shadow-lg shadow-blue-gray-500/5 "
+          ? "container sticky top-0 z-40 py-3 shadow-lg shadow-blue-gray-500/5 "
           : "px-0 py-1"
       }`}
       fullWidth
@@ -48,14 +48,14 @@ export function DashboardNavbar() {
         </Link>
         </div>
         <div className="flex items-center">
-          <IconButton
+          {/* <IconButton
             variant="text"
             color="blue-gray"
             className="grid xl:hidden"
             onClick={() => setOpenSidenav(dispatch, !openSidenav)}
           >
             <Bars3Icon strokeWidth={3} className="h-6 w-6 text-blue-gray-500" />
-          </IconButton>
+          </IconButton> */}
           <Link to="/auth/sign-in">
             <Button
               variant="text"
