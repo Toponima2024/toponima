@@ -42,7 +42,7 @@ export function DashboardNavbar() {
       blurred={fixedNavbar}
     >
       <div className="flex justify-between gap-6 md:flex-row md:items-center">
-        <div className="border border-red-300">
+        <div className="h-10 flex items-center">
         <Link to="/home" className="text-gray-900 ml-1">
           <img src="/img/logo.png" class="h-10 max-w-xs" alt="Logo" />
         </Link>
