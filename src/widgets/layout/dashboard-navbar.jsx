@@ -44,7 +44,7 @@ export function DashboardNavbar() {
       <div className="flex justify-between gap-6 md:flex-row md:items-center">
         <div className="h-10 flex items-center">
         <Link to="/home" className="text-gray-900 ml-1">
-          <img src="/img/logo.png" class="h-10 max-w-xs" alt="Logo" />
+          <img src="/img/logo.png" className="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 max-w-full h-auto" alt="Logo" />        
         </Link>
         </div>
         <div className="flex items-center">

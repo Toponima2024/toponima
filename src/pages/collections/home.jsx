@@ -1,39 +1,38 @@
 import React from "react";
-       
+import { useState, useEffect } from "react";
+
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../fb";       
+import ListCollections from "./listcollections";
 
 export function HomeCollection() {
+  const [collections, setCollections] = useState([])
+  const fetchPost = async () => {      
+    await getDocs(collection(db, "collections"))
+      .then((querySnapshot)=>{               
+        const newData = querySnapshot.docs
+          .map((doc) => ({...doc.data(), id:doc.id }));
+        setCollections(newData);
+      })
+  }
+
+  useEffect(()=>{
+    fetchPost();
+    
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div className="container mx-auto">      
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-  <div className="order-2 md:order-1 border border-gray-300">
-  Meaningful Names. Meaninful Places.
-  The Story Is on the Map.
-  Every street, every place is part of a
-  collections of stories.
-    
-  </div>
-  <div className="order-1 md:order-2 border border-gray-300 bg-[url('/img/header_toponyma.png')] bg-contain bg-center bg-no-repeat  min-h-[30vh]">
-    {/* Contenido de la columna derecha */}
-    <img src="/img/header_toponyma.png" alt="Logo" className="hidden"  />    
-  </div>
-</div>
-<div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <a href="#">
-        <img className="rounded-t-lg" src="/img/alice.jpg" alt="" />
-    </a>
-    <div className="p-5">
-        <a href="#">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-        </a>
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Collection - Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-        <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Read more
-             <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
-        </a>
-    </div>
-</div>
+      <div className="grid grid-cols-1 gap-6">
+        <div className="border border-gray-300 bg-[url('/img/background_collection_header.png')] bg-contain bg-center bg-no-repeat  min-h-[30vh]">
+          {/* Contenido de la columna derecha */}
+          <img src="/img/background_collection_header.png" alt="Logo" className="hidden"  />    
+        </div>
+      </div>
+      <div>
+        <ListCollections collections={collections} />
+      </div>
     </div>
   );
 }

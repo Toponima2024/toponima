@@ -1,12 +1,18 @@
 import React from "react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
+import {  Link } from "react-router-dom";
 
 import {
+  List,
+  ListItem,
+  ListItemPrefix,
+  ListItemSuffix,
   Button,
   IconButton,
   Switch,
   Typography,
   Chip,
+  Card,
 } from "@material-tailwind/react";
 import {
   useMaterialTailwindController,
@@ -15,6 +21,8 @@ import {
   setSidenavType,
   setFixedNavbar,
 } from "@/context";
+
+// className="rounded-none py-1.5 px-3 text-sm font-normal text-blue-gray-700 hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white"
 
 function formatNumber(number, decPlaces) {
   decPlaces = Math.pow(10, decPlaces);
@@ -53,7 +61,7 @@ export function Configurator() {
     green: "from-green-400 to-green-600",
     orange: "from-orange-400 to-orange-600",
     red: "from-red-400 to-red-600",
-    pink: "from-pink-400 to-pink-600",
+    pink: "from-pink-400 to-pink-600", 
   };
 
   React.useEffect(() => {
@@ -72,12 +80,7 @@ export function Configurator() {
     >
       <div className="flex items-start justify-between px-6 pt-8 pb-6">
         <div>
-          <Typography variant="h5" color="blue-gray">
-            Dashboard Configurator
-          </Typography>
-          <Typography className="font-normal text-blue-gray-600">
-            See our dashboard options.
-          </Typography>
+        <img src="/img/logo.png" className="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 max-w-full h-auto" alt="Logo" />        
         </div>
         <IconButton
           variant="text"
@@ -86,55 +89,49 @@ export function Configurator() {
         >
           <XMarkIcon strokeWidth={2.5} className="h-5 w-5" />
         </IconButton>
-      </div>
-      <div className="py-4 px-6">
-        <div className="mb-12">
-          <Typography variant="h6" color="blue-gray">
-            Sidenav Colors
-          </Typography>
-          <div className="mt-3 flex items-center gap-2">
-            {Object.keys(sidenavColors).map((color) => (
-              <span
-                key={color}
-                className={`h-6 w-6 cursor-pointer rounded-full border bg-gradient-to-br transition-transform hover:scale-105 ${
-                  sidenavColors[color]
-                } ${
-                  sidenavColor === color ? "border-black" : "border-transparent"
-                }`}
-                onClick={() => setSidenavColor(dispatch, color)}
-              />
-            ))}
-          </div>
-        </div>
-        <div className="mb-12">
-          <Typography variant="h6" color="blue-gray">
-            Sidenav Types
-          </Typography>
-          <Typography variant="small" color="gray">
-            Choose between 3 different sidenav types.
-          </Typography>
-          <div className="mt-3 flex items-center gap-2">
-            <Button
-              variant={sidenavType === "dark" ? "gradient" : "outlined"}
-              onClick={() => setSidenavType(dispatch, "dark")}
-            >
-              Dark
-            </Button>
-            <Button
-              variant={sidenavType === "transparent" ? "gradient" : "outlined"}
-              onClick={() => setSidenavType(dispatch, "transparent")}
-            >
-              Transparent
-            </Button>
-            <Button
-              variant={sidenavType === "white" ? "gradient" : "outlined"}
-              onClick={() => setSidenavType(dispatch, "white")}
-            >
-              White
-            </Button>
-          </div>
-        </div>
-      </div>
+      </div>      
+      <Card className="w-96 overflow-hidden rounded-md bg-customBg">
+      <List className="my-2 p-0">
+      <Link to="/explore/home" onClick={() => setOpenConfigurator(dispatch, false)}>
+        <ListItem >
+          <ListItemPrefix>
+            <img src="/img/explore_home.svg"  alt="exploreImage" width={20} />
+          </ListItemPrefix>
+          Explore
+        </ListItem>
+      </Link>
+      <Link to="/collections/home"  onClick={() => setOpenConfigurator(dispatch, false)}>
+        <ListItem>
+          <ListItemPrefix>
+            <img src="/img/collections.svg"  alt="exploreImage" width={20} />
+          </ListItemPrefix>
+          Collections
+        </ListItem>
+      </Link>
+      <Link to="/about/home"  onClick={() => setOpenConfigurator(dispatch, false)}>
+        <ListItem >
+          <ListItemPrefix>
+            <img src="/img/about.svg"  alt="exploreImage" width={20} />
+          </ListItemPrefix>
+          About
+        </ListItem>
+      </Link>
+      <ListItem >
+          Terms of Use
+      </ListItem>
+      <ListItem >
+          Privacy Policy
+      </ListItem>
+      <ListItem >
+        Copyright Policy
+      </ListItem>
+      </List>
+    </Card>    
+    <div className="flex items-center justify-start px-6 pt-8 pb-6">
+      <img src="/img/icons8-facebook-48.png"  alt="exploreImage" className="mr-4" />
+      <img src="/img/icons8-instagram-48.png"  alt="exploreImage" className="mr-4" />
+      <img src="/img/icons8-twitterx-48.png"  alt="exploreImage" className="mr-4" />
+    </div>
     </aside>
   );
 }
