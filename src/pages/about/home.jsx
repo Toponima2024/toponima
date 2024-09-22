@@ -6,14 +6,14 @@ export function HomeAbout() {
   return (
     <div className="container mx-auto">      
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-  <div className="order-2 md:order-1 border border-gray-300">
+  <div className="order-2 md:order-1">
   Meaningful Names. Meaninful Places.
   The Story Is on the Map.
   Every street, every place is part of a
   collections of stories.
     
   </div>
-  <div className="order-1 md:order-2 border border-gray-300 bg-[url('/img/header_about.png')] bg-contain bg-center bg-no-repeat  min-h-[30vh]">
+  <div className="order-1 md:order-2  bg-[url('/img/header_about.png')] bg-contain bg-center bg-no-repeat  min-h-[30vh]">
     {/* Contenido de la columna derecha */}
     <img src="/img/header_about.png" alt="Logo" className="hidden"  />    
   </div>

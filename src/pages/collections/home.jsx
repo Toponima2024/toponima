@@ -25,7 +25,7 @@ export function HomeCollection() {
   return (
     <div className="container mx-auto">      
       <div className="grid grid-cols-1 gap-6">
-        <div className="border border-gray-300 bg-[url('/img/background_collection_header.png')] bg-contain bg-center bg-no-repeat  min-h-[30vh]">
+        <div className="bg-[url('/img/background_collection_header.png')] bg-contain bg-center bg-no-repeat  min-h-[30vh]">
           {/* Contenido de la columna derecha */}
           <img src="/img/background_collection_header.png" alt="Logo" className="hidden"  />    
         </div>
