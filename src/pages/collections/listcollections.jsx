@@ -15,11 +15,11 @@ function ListCollections({ collections }) {
         {
         collections.map((collection, index) => (
             <Card className="w-85" key={index}>
-            <CardHeader shadow={false} floated={false} className="h-96">
+            <CardHeader shadow={false} floated={false}>
               <img
                 src={collection.imgUrl}
                 alt="card-image"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-contain"
               />
             </CardHeader>
             <CardBody>
