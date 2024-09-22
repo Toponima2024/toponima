@@ -16,8 +16,12 @@ import {
   ShareIcon,
   ClockIcon,
   CreditCardIcon,
-  Bars3Icon,
+  Bars3Icon,  
 } from "@heroicons/react/24/solid";
+import {
+  ChatBubbleLeftIcon,
+  MagnifyingGlassIcon,
+} from "@heroicons/react/24/outline";
 import {
   useMaterialTailwindController,
   setOpenConfigurator,
@@ -56,7 +60,7 @@ export function DashboardNavbar() {
           >
             <Bars3Icon strokeWidth={3} className="h-6 w-6 text-blue-gray-500" />
           </IconButton> */}
-          <Link to="/auth/sign-in">
+          {/* <Link to="/auth/sign-in">
             <Button
               variant="text"
               color="blue-gray"
@@ -150,7 +154,21 @@ export function DashboardNavbar() {
                 </div>
               </MenuItem>
             </MenuList>
-          </Menu>
+          </Menu> */}
+          <IconButton
+            variant="text"
+            color="blue-gray"
+            onClick={() => undefined}
+          >
+            <MagnifyingGlassIcon className="h-5 w-5 text-blue-gray-500"  />
+          </IconButton>
+          <IconButton
+            variant="text"
+            color="blue-gray"
+            onClick={() => undefined}
+          >
+            <ChatBubbleLeftIcon className="h-5 w-5 text-blue-gray-500"  />
+          </IconButton>
           <IconButton
             variant="text"
             color="blue-gray"
