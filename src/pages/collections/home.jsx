@@ -12,7 +12,7 @@ export function HomeCollection() {
       .then((querySnapshot)=>{               
         const newData = querySnapshot.docs
           .map((doc) => ({...doc.data(), id:doc.id }));
-        setCollections(newData);
+        setCollections(newData.sort((a, b) => a.order - b.order));
       })
   }
 
