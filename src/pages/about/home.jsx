@@ -13,25 +13,26 @@ export function HomeAbout() {
     <div className="container mx-auto">      
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 mt-2">
   <div className="order-2 md:order-1">
-  <div className="flex flex-col items-center justify-center h-full text-center"> 
-  <Typography variant="h3" style={{color:'#6b7280'}} className="mb-4">
-    Meaningful Names. <br/>Meaninful Places.
-  </Typography>
-  <span
-      style={{
-        display: "block",
-        fontSize: "16px",
-        color: "#5bafc5",
-        fontWeight: "600",
-        lineHeight: '2.5',
-      }}
-    >
-      The Story Is on the Map.
-    </span>
-    <Typography variant="h6" color="blue-gray" className="mb-4">
-      "Every street and every place is home to a collection of stories."
-    </Typography>
-    <Link to="/collections/home">
+  <div className="flex flex-col items-center justify-center h-full text-center">            
+              <Typography variant="h3" style={{color:'#6b7280'}} className="mb-4">
+                Meaningful Names. Meaninful Places.
+              </Typography>
+              <span
+                style={{
+                  display: "block",
+                  fontSize: "16px",
+                  color: "#5bafc5",
+                  fontWeight: "600",
+                  lineHeight: '2.5',
+                }}
+              >
+                The Story Is on the Map.
+              </span>
+              <Typography variant="h6" color="blue-gray" className="mb-4">
+                Every street, every place is part of a
+                collections of stories.
+              </Typography>
+              <Link to="/collections/home">
                 <Button 
                 style={
                   {
@@ -56,12 +57,12 @@ export function HomeAbout() {
                 >
                   Go To Collections
                 </Button>
-    </Link>
-  </div>
+              </Link>
+        </div> 
   </div>
   <div className="order-1 md:order-2  flex items-center justify-center" >
     {/* Contenido de la columna derecha */}
-    <img src="/img/header_about.png" style={{height:'500px', width:'auto'}} alt="Logo"   className="object-contain h-full w-full"   />    
+    <img src="/img/header_about.png" style={{height:'350px', width:'auto'}} alt="Logo"   className="object-contain h-full w-full"   />    
   </div>
 </div>
 <div 
