@@ -33,7 +33,7 @@ import ConceptPage from "./concept";
 
 export function Home() {
   return (
-    <div className="container mx-auto">      
+    <div className="container mx-auto">   
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 mt-2">
         <div className="order-2 md:order-1">
         <div className="flex flex-col items-center justify-center h-full text-center">            
@@ -82,10 +82,11 @@ export function Home() {
                 </Button>
               </Link>
         </div>          
-        </div>
-        <div className="order-1 md:order-2 bg-[url('/img/header_toponyma.png')] bg-contain bg-center bg-no-repeat  min-h-[30vh]">
+        </div> 
+       
+        <div className="order-1 md:order-2  min-h-[30vh] flex items-center justify-center" >
           {/* Contenido de la columna derecha */}
-          <img src="/img/header_toponyma.png" alt="Logo" className="hidden"  />    
+          <img src="/img/header_toponyma.png" alt="Logo"  className="object-contain h-full w-full" />    
         </div>
       </div>
       <ConceptPage />

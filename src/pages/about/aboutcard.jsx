@@ -44,7 +44,6 @@ import {
    
   export function AboutCard({id}) {
     const cardInfo = aboutInfoCards.find((card) => card.id === id);
-    console.log('AboutCardInfo', cardInfo);
     return (
       <Card className="w-full max-w-[26rem] shadow-lg">
         <CardHeader floated={false} color="blue-gray">
