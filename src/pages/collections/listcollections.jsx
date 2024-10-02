@@ -23,18 +23,18 @@ function ListCollections({ collections }) {
               />
             </CardHeader>
             <CardBody>
-              <div className="mb-2 flex items-center justify-between">
-                <Typography color="blue-gray" className="font-medium">
+              <div className="mb-2 text-center">
+                <div 
+                  className="rounded-md py-0.5 px-2.5 border border-transparent text-sm text-white transition-all shadow-sm"
+                  style={{backgroundColor: collection.color}}
+                >
                   {collection.title}
-                </Typography>
-                <Typography color="blue-gray" className="font-medium">
-                  
-                </Typography>
+                </div>
               </div>
               <Typography
                 variant="small"
                 color="gray"
-                className="font-normal opacity-75"
+                className="font-normal opacity-75 text-center"
               >
                 {collection.content}
               </Typography>

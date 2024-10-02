@@ -5,17 +5,17 @@ const conceptInfoDerecha = [
   {
     id: 1,
     title: 'What is Toponima?',
-    img:'/img/caracol_small_about_blanco.png'
+    img:'/img/toponima_icon.svg'
   },
   {
     id: 2,
     title: 'What is a toponym?',
-    img:'/img/toponym.svg'
+    img:'/img/what_is_toponym.svg'
   },
   {
     id: 3,
     title: `What's in a name?`,
-    img:'/img/what-is-a-name.png'
+    img:'/img/what_is_a_name.svg'
   },
 ]
 
@@ -23,17 +23,17 @@ const conceptInfoIzquierda = [
   {
     id: 4,
     title: 'Use Toponima at your school.',
-    img:'/img/use_for_school_icon_blanco.png'
+    img:'/img/school.svg'
   },
   {
     id: 5,
     title: 'Use Toponima at your bussiness.',
-    img:'/img/business_icon_blanco.png'
+    img:'/img/bussiness.svg'
   },
   {
     id: 6,
     title: 'Follow us and share the story.',
-    img:'/img/follow_icon_blanco.png'
+    img:'/img/follow_us.svg'
   }
 
 ]
@@ -46,8 +46,8 @@ function ConceptPage() {
           <div>
             {
               conceptInfoDerecha.map(concept => (
-                <div key={concept.id} className='flex items-center gap-4'>
-                  <Avatar src={concept.img} sx={{ width: 12, height: 12 }} />
+                <div key={concept.id} className='flex items-center gap-4  my-4'>
+                  <img src={concept.img} alt={concept.title} className='w-8 h-8' />
                   <h1>{concept.title}</h1>
                 </div>
               ))
@@ -56,8 +56,8 @@ function ConceptPage() {
           <div>
             {
               conceptInfoIzquierda.map(concept => (
-                <div key={concept.id} className='flex items-center gap-4'>
-                  <Avatar src={concept.img} sx={{ width: 12, height: 12 }} />
+                <div key={concept.id} className='flex items-center gap-4 my-4'>
+                  <img src={concept.img} alt={concept.title} className='w-8 h-8' />
                   <h1>{concept.title}</h1>
                 </div>
               ))
