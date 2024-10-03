@@ -13,7 +13,7 @@ export function HomeAbout() {
     <div className="container mx-auto">      
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 mt-2">
   <div className="order-2 md:order-1">
-  <div className="flex flex-col items-center justify-center h-full text-center">            
+    <div className="flex flex-col items-center justify-center h-full text-center">            
               <Typography variant="h3" style={{color:'#6b7280'}} className="mb-4">
                 Meaningful Names. Meaninful Places.
               </Typography>
@@ -58,7 +58,7 @@ export function HomeAbout() {
                   Go To Collections
                 </Button>
               </Link>
-        </div> 
+    </div> 
   </div>
   <div className="order-1 md:order-2  flex items-center justify-center" >
     {/* Contenido de la columna derecha */}
