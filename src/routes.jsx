@@ -10,6 +10,7 @@ import { Home, Profile, Tables, Notifications } from "@/pages/explore";
 import { SignIn, SignUp } from "@/pages/auth";
 import { HomeCollection } from "@/pages/collections";
 import { HomeAbout } from "@/pages/about";
+import StoryDetail from "./pages/explore/storydetail";
 
 const icon = {
   className: "w-5 h-5 text-inherit",
@@ -39,9 +40,9 @@ export const routes = [
       },
       {
         icon: <InformationCircleIcon {...icon} />,
-        name: "notifications",
-        path: "/notifications",
-        element: <Notifications />,
+        name: "story detail",
+        path: "/story/:id",
+        element: <StoryDetail />,
       },
     ],
   },
