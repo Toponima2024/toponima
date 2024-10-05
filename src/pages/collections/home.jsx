@@ -62,7 +62,7 @@ export function HomeCollection() {
                     textTransform: 'capitalize',
                     justifyItems:'center',
                     backgroundColor: '#087e94',
-                    fontSize:'16px',
+                    fontSize: '14px',
                     lineHeight:'2',
                     // width:'200px',
                     borderRadius :'12px',

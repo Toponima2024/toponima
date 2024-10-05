@@ -60,10 +60,7 @@ const ExpandableContent = ({ htmlContent, wordLimit=200 }) => {
 
   return (
     <div className="container mx-auto">
-        <div >
-            {parse(expanded ? htmlContent : truncatedContent)}
-        </div>
-        <div className='font-ProximaNovaBold'>
+        <div className='font-ProximaNovaRegular'>
             {parse(expanded ? htmlContent : truncatedContent)}
         </div>
       {isTruncated && (
@@ -77,6 +74,7 @@ const ExpandableContent = ({ htmlContent, wordLimit=200 }) => {
                         opacity:'0.9',
                         textTransform:'none',
                         color: 'white',
+                        marginTop:'10px',
                         borderRadius: '20px',
 
                     }}

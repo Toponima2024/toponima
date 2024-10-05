@@ -40,36 +40,38 @@ function StoryDetail() {
 
 console.log(story)
   return (
-    <div style={{marginBottom:'25px'}} className="container mx-auto">
-          <div style={{marginTop:'-8rem'}} className="bg-[url('/img/header_landing_story.jpg')] bg-contain bg-left  bg-no-repeat min-h-[50vh]">
-          <div className="flex flex-col items-center justify-center text-center">            
-              <Typography variant="h3" style={{color:'#6b7280'}} className="mb-4">
-                Meaningful Names. Meaninful Places.
-              </Typography>
-              <span
+    <div style={{marginBottom:'25px'}} className="container mx-auto ">
+          <div className="flex justify-end items-center bg-[url('/img/header_landing_story.jpg')] bg-cover bg-left  bg-no-repeat min-h-[50vh]">
+          <div className="flex flex-col items-end justify-end text-left h-full">            
+            <Typography  style={{color:'#3d3d3d', fontSize:'40px', lineHeight:'1'}} className="mb-4 font-ProximaNovaRegular">
+              Meaningful Names. Meaninful Places.
+            </Typography>
+              <span className="font-ProximaNovaRegular"
                 style={{
                   display: "block",
                   fontSize: "16px",
-                  color: "#5bafc5",
-                  fontWeight: "600",
+                  color: "#087e94",
                   lineHeight: '2.5',
                 }}
               >
                 The Story Is on the Map.
               </span>
-              <Typography variant="h6" color="blue-gray" className="mb-4">
+              <Typography style={{color:'#6d6d6d', lineHeight: '1.25', fontSize:'16px'}} className="mb-4 font-ProximaNovaRegular">
                 Every street, every place is part of a
                 collections of stories.
               </Typography>
               <Link to="/explore/home">
                 <Button 
+                className="font-ProximaNovaRegular"
+                size="sm"
                 style={
                   {
                     display: 'flex',
                     justifyContent:'center',
+                    padding: '5px 15px',
                     textTransform: 'capitalize',
                     justifyItems:'center',
-                    backgroundColor: '#5bafc5',
+                    backgroundColor: '#087e94',
                     width:'200px',
                     fontSize: '14px',
                     borderRadius :'12px',
@@ -79,7 +81,7 @@ console.log(story)
                       },
                       '&:active': {
                         boxShadow: 'none',
-                        backgroundColor: '#5bafc5',
+                        backgroundColor: '#087e94',
                       }
                   }
                 }
