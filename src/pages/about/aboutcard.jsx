@@ -54,7 +54,7 @@ import {
           <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
         </CardHeader>
         <CardBody>
-          <Typography color="gray">
+          <Typography className="font-ProximaNovaRegular" style={{fontSize:'16px', lineHeight:'1.5'}}>
             {cardInfo.title}
           </Typography>
         </CardBody>
