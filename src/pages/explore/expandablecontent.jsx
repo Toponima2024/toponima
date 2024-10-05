@@ -70,8 +70,7 @@ const ExpandableContent = ({ htmlContent, wordLimit=200 }) => {
                 onClick={() => setExpanded(!expanded)}
                 style={
                     {
-                        backgroundColor:'#5bafc5', 
-                        opacity:'0.9',
+                        backgroundColor: '#087e94',
                         textTransform:'none',
                         color: 'white',
                         marginTop:'10px',

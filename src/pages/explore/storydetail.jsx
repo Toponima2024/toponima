@@ -72,8 +72,8 @@ console.log(story)
                     textTransform: 'capitalize',
                     justifyItems:'center',
                     backgroundColor: '#087e94',
-                    width:'200px',
-                    fontSize: '14px',
+                    fontSize:'16px',
+                    lineHeight:'2',
                     borderRadius :'12px',
                     '&:hover': {
                         backgroundColor: '#5bafc5',
