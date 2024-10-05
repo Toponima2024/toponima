@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    src: local("ProximaNovaRegular"), 
+    url('../../src/assets/fonts/proximanova_regular.ttf') format('truetype');    
+}
+
+@font-face {
+    font-family: 'ProximaNovaLight';
+    src: local("ProximaNovaLight"), 
+    url('../../src/assets/fonts/proximanova_light.otf') format('opentype');    
+}
+
+@font-face {
+    font-family: 'ProximaNovaBold';
+    src: local("ProximaNovaBold"), 
+    url('../../src/assets/fonts/proximanova_bold.otf') format('opentype');    
+}
+
+@font-face {
+    font-family: 'FreightTextProLightRegular';
+    src: local("FreightTextProLightRegular"), 
+    url('../../src/assets/fonts/FreightTextProLight-Regular.ttf') format('truetype');    
+}
+
+@font-face {
+    font-family: 'FreightTextProBoldRegular';
+    src: local("FreightTextProBoldRegular"), 
+    url('../../src/assets/fonts/FreightTextProBold-Regular.ttf') format('truetype');    
+}
+
+

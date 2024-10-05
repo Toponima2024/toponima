@@ -25,7 +25,7 @@ function ListCollections({ collections }) {
             <CardBody>
               <div className="mb-2 text-center">
                 <div 
-                  className="rounded-md py-0.5 px-2.5 border border-transparent text-sm text-white transition-all shadow-sm"
+                  className="rounded-md py-0.5 px-2.5 border border-transparent text-sm text-white transition-all shadow-sm font-FreightTextProBoldRegular"
                   style={{backgroundColor: collection.color}}
                 >
                   {collection.title}
@@ -33,8 +33,8 @@ function ListCollections({ collections }) {
               </div>
               <Typography
                 variant="small"
-                color="gray"
-                className="font-normal opacity-75 text-center"
+                className="text-center font-FreightTextProLightRegular"
+                style={{fontSize: '1rem'}}
               >
                 {collection.content}
               </Typography>

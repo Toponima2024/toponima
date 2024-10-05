@@ -37,31 +37,34 @@ export function HomeCollection() {
         <div className="bg-[url('/img/background_collection_header.png')] bg-contain bg-center bg-no-repeat  min-h-[30vh]">
           {/* Contenido de la columna derecha */}
           <div className="flex flex-col items-center justify-center h-full text-center">            
-              <Typography variant="h3" style={{color:'#6b7280'}} className="mb-4">
+              <Typography  style={{color:'#3d3d3d', fontSize:'40px', lineHeight:'1'}} className="mb-4 font-ProximaNovaRegular">
                 Meaningful Names. Meaninful Places.
               </Typography>
-              <span
+              <span className="font-ProximaNovaRegular"
                 style={{
                   display: "block",
                   fontSize: "16px",
-                  color: "#5bafc5",
-                  fontWeight: "600",
+                  color: "#087e94",
                   lineHeight: '2.5',
                 }}
-              >
+              > 
                 The Story Is on the Map.
               </span>
               <Link to="/explore/home">
                 <Button 
+                size="sm"
+                className="font-ProximaNovaRegular"
                 style={
                   {
                     display: 'flex',
+                    padding: '5px 15px',
                     justifyContent:'center',
                     textTransform: 'capitalize',
                     justifyItems:'center',
-                    backgroundColor: '#5bafc5',
-                    width:'200px',
-                    fontSize: '14px',
+                    backgroundColor: '#087e94',
+                    fontSize:'16px',
+                    lineHeight:'2',
+                    // width:'200px',
                     borderRadius :'12px',
                     '&:hover': {
                         backgroundColor: '#5bafc5',
@@ -69,7 +72,7 @@ export function HomeCollection() {
                       },
                       '&:active': {
                         boxShadow: 'none',
-                        backgroundColor: '#5bafc5',
+                        backgroundColor: '#087e94',
                       }
                   }
                 }
@@ -81,12 +84,13 @@ export function HomeCollection() {
         </div>
       </div>
       <div 
-        className="text-center bg-[#cccccc] p-2 mt-2 mb-2"
-        style={{fontWeight:'bold'}}  
+        className="text-center bg-[#cccccc] p-2 mt-2 mb-2 font-ProximaNovaRegular"
+        style={{fontSize:'18px', lineHeight:'1.333'}}  
       >
       "Every street, every place is part of a collections of stories."
       </div>
       <div>
+
         <ListCollections collections={collections} />
       </div>
     </div>

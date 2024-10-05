@@ -8,6 +8,13 @@ module.exports = withMT({
       colors: {
         customBg: '#f0fafb',
       },
+      fontFamily: {
+        ProximaNovaRegular: ['ProximaNovaRegular'],
+        ProximaNovaLight: ['ProximaNovaLight'],
+        ProximaNovaBold: ['ProximaNovaBold'],
+        FreightTextProLightRegular: ['FreightTextProLightRegular'],
+        FreightTextProBoldRegular: ['FreightTextProBoldRegular'],
+      },
     },
   },
   plugins: [],
