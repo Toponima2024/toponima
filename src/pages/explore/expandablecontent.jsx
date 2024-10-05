@@ -67,6 +67,8 @@ const ExpandableContent = ({ htmlContent, wordLimit=200 }) => {
         <div style={{display:'flex', justifyContent:'flex-end'}} >
             <Button 
                 variant="contained" 
+                className="font-ProximaNovaRegular"
+                size="sm"
                 onClick={() => setExpanded(!expanded)}
                 style={
                     {
