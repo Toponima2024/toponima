@@ -33,7 +33,7 @@ function ListCollections({ collections }) {
               </div>
               <Typography
                 variant="small"
-                className="text-center font-FreightTextProLightRegular"
+                className="text-center font-ProximaNovaRegular"
                 style={{fontSize: '1rem'}}
               >
                 {collection.content}

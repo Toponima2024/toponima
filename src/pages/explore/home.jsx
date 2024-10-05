@@ -44,11 +44,11 @@ export function Home() {
 
   return (
     <div className="container mx-auto">   
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 mt-2">
-        <div className="order-2 md:order-1">
-        <div className="flex flex-col items-center justify-center h-full text-center">            
+    <div className="grid grid-cols-1 mx-auto"> 
+      <img src="/img/header_toponyma.png" alt="Logo"  className="object-contain h-[50vh] w-full" />
+      <div className="flex flex-col items-center justify-center h-full text-center">            
         <Typography  style={{color:'#3d3d3d', fontSize:'40px', lineHeight:'1'}} className="mb-4 font-ProximaNovaRegular">
-          Meaningful Names. Meaninful Places.
+          Meaningful Names.<br/> Meaningful Places.
         </Typography>
         <span className="font-ProximaNovaRegular"
                 style={{
@@ -93,20 +93,16 @@ export function Home() {
                   Go To Collections
                 </Button>
               </Link>
-        </div>          
-        </div> 
-       
-        <div className="order-1 md:order-2  min-h-[30vh] flex items-center justify-center" >
-          {/* Contenido de la columna derecha */}
-          <img src="/img/header_toponyma.png" alt="Logo"  className="object-contain h-full w-full" />    
-        </div>
-      </div>
+        </div>   
+    </div>
       <ConceptPage />
           <div className="container mx-auto mb-10">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {
                 stories.map((story) => ( 
-                      <StoryCard key={story.id} story={story} collectionCatalog={collections}/>
+                  <Link key={story.id} to={`/explore/story/${story.id}`} className="text-blue-500">
+                    <StoryCard  story={story} collectionCatalog={collections}/>
+                  </Link>
                       
                     ))
               }

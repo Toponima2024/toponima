@@ -32,13 +32,13 @@ export function HomeCollection() {
   }, []);
 
   return (
-    <div className="container mx-auto">      
+    <div className="container mx-auto">
       <div className="grid grid-cols-1 gap-6">
         <div className="bg-[url('/img/background_collection_header.png')] bg-contain bg-center bg-no-repeat  min-h-[30vh]">
           {/* Contenido de la columna derecha */}
           <div className="flex flex-col items-center justify-center h-full text-center">            
               <Typography  style={{color:'#3d3d3d', fontSize:'40px', lineHeight:'1'}} className="mb-4 font-ProximaNovaRegular">
-                Meaningful Names. Meaninful Places.
+                Meaningful Names.<br/> Meaninful Places.
               </Typography>
               <span className="font-ProximaNovaRegular"
                 style={{
@@ -84,7 +84,7 @@ export function HomeCollection() {
         </div>
       </div>
       <div 
-        className="text-center bg-[#cccccc] p-2 mt-2 mb-2 font-ProximaNovaRegular"
+        className="text-center bg-[#cccccc] p-2 mt-2 mb-2 font-ProximaNovaRegular w-full md:w-3/5 mx-auto"
         style={{fontSize:'18px', lineHeight:'1.333'}}  
       >
       "Every street, every place is part of a collections of stories."

@@ -59,7 +59,7 @@ const ExpandableContent = ({ htmlContent, wordLimit=200 }) => {
   const isTruncated = countWords(htmlContent) > wordLimit;
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto w-4/5 mt-5 mb-5">
         <div className='font-ProximaNovaRegular'>
             {parse(expanded ? htmlContent : truncatedContent)}
         </div>

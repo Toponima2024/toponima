@@ -10,12 +10,12 @@ import {  Link } from "react-router-dom";
 
 export function HomeAbout() {
   return (
-    <div className="container mx-auto">      
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 mt-2">
-  <div className="order-2 md:order-1">
-    <div className="flex flex-col items-center justify-start  h-full text-center md:justify-center">            
-    <Typography  style={{color:'#3d3d3d', fontSize:'40px', lineHeight:'1'}} className="mb-4 font-ProximaNovaRegular">
-                Meaningful Names. Meaninful Places.
+    <div className="container mx-auto">     
+          <div className="grid grid-cols-1 mx-auto"> 
+            <img src="/img/header_about.png" alt="Logo"   className="object-contain h-[50vh] w-full"    />    
+            <div className="flex flex-col items-center justify-start  h-full text-center md:justify-center">            
+              <Typography  style={{color:'#3d3d3d', fontSize:'40px', lineHeight:'1'}} className="mb-4 font-ProximaNovaRegular">
+                Meaningful Names.<br/> Meaningful Places.
               </Typography>
               <span className="font-ProximaNovaRegular"
 
@@ -61,14 +61,8 @@ export function HomeAbout() {
                   Go To Collections
                 </Button>
               </Link>
-    </div> 
-  </div>
-  <div className="order-1 md:order-2  flex items-center justify-center" >
-    {/* Contenido de la columna derecha */}
-    <img src="/img/header_about.png" style={{height:'350px', width:'auto'}} alt="Logo"   className="object-contain h-full w-full"   />    
-  </div>
-</div>
-
+            </div> 
+          </div>       
 <div 
   className="text-center bg-[#cccccc] p-2 mt-2 mb-2 font-ProximaNovaRegular w-full md:w-3/5 mx-auto"
   style={{color:'#3d3d3d', fontWeight:'bold', fontSize:'18px', lineHeight:'1.667'}}

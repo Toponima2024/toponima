@@ -41,10 +41,10 @@ function StoryDetail() {
 console.log(story)
   return (
     <div style={{marginBottom:'25px'}} className="container mx-auto ">
-          <div className="flex justify-end items-center bg-[url('/img/header_landing_story.jpg')] bg-cover bg-left  bg-no-repeat min-h-[50vh]">
-          <div className="flex flex-col items-end justify-end text-left h-full">            
-            <Typography  style={{color:'#3d3d3d', fontSize:'40px', lineHeight:'1'}} className="mb-4 font-ProximaNovaRegular">
-              Meaningful Names. Meaninful Places.
+          <div className="flex justify-center items-center bg-[url('/img/header_landing_story.jpg')] bg-contain bg-left  bg-no-repeat h-[40vh] ">
+          <div className="flex flex-col items-center justify-center text-center h-full ml-20">            
+            <Typography  style={{color:'#3d3d3d', fontSize:'28px', lineHeight:'1'}} className="mb-4 font-ProximaNovaRegular">
+              Meaningful Names.<br/> Meaningful Places.
             </Typography>
               <span className="font-ProximaNovaRegular"
                 style={{
@@ -91,9 +91,11 @@ console.log(story)
               </Link>
           </div> 
           </div>
+          <div className="container mx-auto">
           {
             story?.description && (<ExpandableContent  htmlContent={story.description} wordLimit={75}/>)
           }
+          </div>
                 
     </div>
   )
