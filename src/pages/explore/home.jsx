@@ -47,33 +47,35 @@ export function Home() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 mt-2">
         <div className="order-2 md:order-1">
         <div className="flex flex-col items-center justify-center h-full text-center">            
-              <Typography variant="h3" style={{color:'#6b7280'}} className="mb-4">
-                Meaningful Names. Meaninful Places.
-              </Typography>
-              <span
+        <Typography  style={{color:'#3d3d3d', fontSize:'40px', lineHeight:'1'}} className="mb-4 font-ProximaNovaRegular">
+          Meaningful Names. Meaninful Places.
+        </Typography>
+        <span className="font-ProximaNovaRegular"
                 style={{
                   display: "block",
                   fontSize: "16px",
-                  color: "#5bafc5",
-                  fontWeight: "600",
+                  color: "#087e94",
                   lineHeight: '2.5',
                 }}
               >
                 The Story Is on the Map.
               </span>
-              <Typography variant="h6" color="blue-gray" className="mb-4">
+              <Typography style={{color:'#6d6d6d', lineHeight: '1.25', fontSize:'16px'}} className="mb-4 font-ProximaNovaRegular">
                 Every street, every place is part of a
                 collections of stories.
               </Typography>
               <Link to="/collections/home">
                 <Button 
+                className="font-ProximaNovaRegular"
+                size="sm"
                 style={
                   {
                     display: 'flex',
+                    padding: '5px 15px',
                     justifyContent:'center',
                     textTransform: 'capitalize',
                     justifyItems:'center',
-                    backgroundColor: '#5bafc5',
+                    backgroundColor: '#087e94',
                     width:'200px',
                     fontSize: '14px',
                     borderRadius :'12px',
@@ -83,7 +85,7 @@ export function Home() {
                       },
                       '&:active': {
                         boxShadow: 'none',
-                        backgroundColor: '#5bafc5',
+                        backgroundColor: '#087e94',
                       }
                   }
                 }
@@ -100,7 +102,7 @@ export function Home() {
         </div>
       </div>
       <ConceptPage />
-          <div className="container mx-auto">
+          <div className="container mx-auto mb-10">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {
                 stories.map((story) => ( 
