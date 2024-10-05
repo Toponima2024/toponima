@@ -75,6 +75,9 @@ const ExpandableContent = ({ htmlContent, wordLimit=200 }) => {
                         backgroundColor: '#087e94',
                         textTransform:'none',
                         color: 'white',
+                        fontSize:'16px',
+                        lineHeight:'2',
+                        padding: '5px 15px',
                         marginTop:'10px',
                         borderRadius: '20px',
 
