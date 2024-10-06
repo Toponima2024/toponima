@@ -9,11 +9,12 @@ import {
 } from "@material-tailwind/react";
 import {  Link } from "react-router-dom";
 import ExpandableContent from './expandablecontent';
+import LoadingSpinner from '@/widgets/loading/LoadingSpinner';
 
 
 function StoryDetail() {
     const { id } = useParams();
-    const [story, setStory] = useState({});
+    const [story, setStory] = useState();
 
     
     const fetchStory = async ( id ) => { 
@@ -36,13 +37,13 @@ function StoryDetail() {
     useEffect(() => {
         fetchStory(id);
     }, [id])
-      
-
-console.log(story)
+  
+  if(!story) return <LoadingSpinner />  
   return (
     <div style={{marginBottom:'25px'}} className="container mx-auto ">
-          <div className="flex justify-center items-center bg-[url('/img/header_landing_story.jpg')] bg-contain bg-left  bg-no-repeat h-[40vh] ">
-          <div className="flex flex-col items-center justify-center text-center h-full ml-20">            
+      <div className="grid grid-cols-1 mx-auto"> 
+      <img src="/img/header_landing_story.png" alt="Logo"   className="object-contain h-[30vh] w-full"    />    
+      <div className="flex flex-col items-center justify-center text-center h-full">            
             <Typography  style={{color:'#3d3d3d', fontSize:'28px', lineHeight:'1'}} className="mb-4 font-ProximaNovaRegular">
               Meaningful Names.<br/> Meaningful Places.
             </Typography>
@@ -90,13 +91,25 @@ console.log(story)
                 </Button>
               </Link>
           </div> 
-          </div>
+      </div> 
           <div className="container mx-auto">
+            <p className="font-ProximaNovaRegular text-2xl text-center mt-10 mb-5">{story.title}</p>
           {
             story?.description && (<ExpandableContent  htmlContent={story.description} wordLimit={75}/>)
           }
           </div>
-                
+          <div className="grid grid-cols-2 gap-2">
+            {story?.imagesUrls.map(( imageLink , index) => (
+              <div key={index} className="flex justify-center items-center">
+                <img
+                  className="h-40 max-w-full rounded-lg object-cover object-center md:h-60"
+                  src={imageLink}
+                  alt="imageLink"
+                />
+              </div>
+            ))}
+          </div>
+
     </div>
   )
 }

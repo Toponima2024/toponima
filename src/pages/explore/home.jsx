@@ -10,6 +10,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../fb";       
 import { useState, useEffect } from "react";
 import StoryCard from "./storycard";
+import LoadingSpinner from "@/widgets/loading/LoadingSpinner";
 
 
 export function Home() {
@@ -41,7 +42,7 @@ export function Home() {
       
     }, []);
 
-
+    if(stories.length === 0 || collections.length === 0 ) return <LoadingSpinner />  
   return (
     <div className="container mx-auto">   
     <div className="grid grid-cols-1 mx-auto"> 

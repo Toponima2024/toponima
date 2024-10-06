@@ -11,6 +11,7 @@ import {
 } from "@material-tailwind/react";
 
 import {  Link } from "react-router-dom";
+import LoadingSpinner from "@/widgets/loading/LoadingSpinner";
 
 
 
@@ -30,6 +31,7 @@ export function HomeCollection() {
     
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  if(collections.length === 0 ) return <LoadingSpinner />  
 
   return (
     <div className="container mx-auto">
