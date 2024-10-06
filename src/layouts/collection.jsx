@@ -43,9 +43,7 @@ export function Collection() {
               ))
           )}
         </Routes>
-        <div className="mt-auto sticky bottom-0 w-full text-white py-4 backdrop-blur-xl">
           <Footer />
-        </div>
       </div>
     </div>
   );

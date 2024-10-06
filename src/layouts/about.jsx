@@ -1,6 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { Cog6ToothIcon } from "@heroicons/react/24/solid";
 import { IconButton } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
+
 import {
   Sidenav,
   DashboardNavbar,
@@ -43,9 +45,7 @@ export function About() {
               ))
           )}
         </Routes>
-        <div className="mt-auto sticky bottom-0 w-full text-white py-4 backdrop-blur-xl">
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </div>
   );
