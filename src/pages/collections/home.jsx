@@ -36,7 +36,7 @@ export function HomeCollection() {
   return (
     <div className="container mx-auto">
       <div className="grid grid-cols-1 gap-6">
-        <div className="bg-[url('/img/header_collections.png')] bg-contain bg-center bg-no-repeat  min-h-[30vh]">
+        <div className="bg-[url('/img/header_collections.png')] bg-contain bg-center bg-no-repeat  min-h-[50vh]">
           {/* Contenido de la columna derecha */}
           <div className="flex flex-col items-center justify-center h-full text-center">            
               <Typography  style={{color:'#3d3d3d', fontSize:'40px', lineHeight:'1'}} className="mb-4 font-ProximaNovaRegular">

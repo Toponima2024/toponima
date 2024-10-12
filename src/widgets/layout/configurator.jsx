@@ -128,9 +128,9 @@ export function Configurator() {
       </List>
     </Card>    
     <div className="flex items-center justify-start px-6 pt-8 pb-6">
-    <img src="/img/facebook.svg" height={25} width={25} alt="exploreImage" className="mr-4" />
-            <img src="/img/instagram.svg" height={25} width={25}  alt="exploreImage" className="mr-4" />
-            <img src="/img/x.svg" height={25} width={25}  alt="exploreImage" className="mr-4" />
+      <img src="/img/facebook.svg" height={25} width={25} alt="exploreImage" className="mr-4" />
+      <img src="/img/instagram.svg" height={25} width={25}  alt="exploreImage" className="mr-4" />
+      <img src="/img/x.svg" height={25} width={25}  alt="exploreImage" className="mr-4" />
     </div>
     </aside>
   );
