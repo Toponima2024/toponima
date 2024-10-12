@@ -14,6 +14,7 @@
     "apexcharts": "3.44.0",
     "firebase": "^10.13.2",
     "html-react-parser": "^5.1.17",
+    "mapbox-gl": "^3.7.0",
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-apexcharts": "1.4.1",

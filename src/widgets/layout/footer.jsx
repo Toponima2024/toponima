@@ -67,9 +67,9 @@ Giovanni Tazza. Photography by Agustina Isidori`;
           </Typography>
           </div>
           <div className="flex flex items-center justify-center col-span-2">
-            <img src="/img/icons8-facebook-48.png"  alt="exploreImage" className="mr-4" />
-            <img src="/img/icons8-instagram-48.png"  alt="exploreImage" className="mr-4" />
-            <img src="/img/icons8-twitterx-48.png"  alt="exploreImage" className="mr-4" />
+            <img src="/img/facebook.svg" height={25} width={25} alt="exploreImage" className="mr-4" />
+            <img src="/img/instagram.svg" height={25} width={25}  alt="exploreImage" className="mr-4" />
+            <img src="/img/x.svg" height={25} width={25}  alt="exploreImage" className="mr-4" />
           </div>
         </div>
       </div>

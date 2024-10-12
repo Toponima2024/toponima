@@ -11,6 +11,7 @@ import { db } from "../../fb";
 import { useState, useEffect } from "react";
 import StoryCard from "./storycard";
 import LoadingSpinner from "@/widgets/loading/LoadingSpinner";
+import Map from "./map";
 
 
 export function Home() {
@@ -46,7 +47,7 @@ export function Home() {
   return (
     <div className="container mx-auto">   
       <div className="grid grid-cols-1 mx-auto"> 
-        <img src="/img/header_toponyma.png" alt="Logo"  className="object-contain h-[50vh] w-full" />
+        <img src="/img/header_explore.png" alt="Logo"  className="object-contain h-[50vh] w-full" />
         <div className="flex flex-col items-center justify-center h-full text-center">            
           <Typography  style={{color:'#3d3d3d', fontSize:'40px', lineHeight:'1'}} className="mb-4 font-ProximaNovaRegular">
             Meaningful Names.<br/> Meaningful Places.
@@ -97,6 +98,7 @@ export function Home() {
           </div>   
       </div>
       <ConceptPage />
+      <Map />
       <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {
