@@ -72,6 +72,7 @@ function StoryDetail() {
                     padding: '5px 15px',
                     textTransform: 'capitalize',
                     justifyItems:'center',
+                    width:'200px',
                     backgroundColor: '#087e94',
                     fontSize:'16px',
                     lineHeight:'2',
@@ -98,11 +99,11 @@ function StoryDetail() {
             story?.description && (<ExpandableContent  htmlContent={story.description} wordLimit={75}/>)
           }
           </div>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-2 md:gap-6">
             {story?.imagesUrls.map(( imageLink , index) => (
               <div key={index} className="flex justify-center items-center">
                 <img
-                  className="h-40 max-w-full rounded-lg object-cover object-center md:h-60"
+                  className="w-full rounded-lg object-cover object-center "
                   src={imageLink}
                   alt="imageLink"
                 />

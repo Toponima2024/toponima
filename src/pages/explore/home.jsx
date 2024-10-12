@@ -17,6 +17,7 @@ import Map from "./map";
 export function Home() {
   const [stories, setStories] = useState([]);
   const [collections, setCollections] = useState([])
+  const [positions, setPositions] = useState([])
   
   
   const fetchStories = async () => {      
@@ -43,6 +44,21 @@ export function Home() {
       
     }, []);
 
+    useEffect(() => {
+      if(stories.length > 0){
+        const positions = stories.map((story) => {
+          return {
+            location: story.position,
+            title: story.toponym,
+            marker: story.marker,
+            mainImage: story.mainImage,            
+            id: story.id
+          }
+        })
+        setPositions(positions)
+      }
+    }, [stories])
+    
     if(stories.length === 0 || collections.length === 0 ) return <LoadingSpinner />  
   return (
     <div className="container mx-auto">   
@@ -80,6 +96,7 @@ export function Home() {
                       backgroundColor: '#087e94',
                       fontSize:'16px',
                       lineHeight:'2',
+                      width:'200px',
                       borderRadius :'12px',
                       '&:hover': {
                           backgroundColor: '#5bafc5',
@@ -98,7 +115,7 @@ export function Home() {
           </div>   
       </div>
       <ConceptPage />
-      <Map />
+      <Map positions={positions}/>
       <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {

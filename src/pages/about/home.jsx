@@ -44,6 +44,7 @@ export function HomeAbout() {
                     textTransform: 'capitalize',
                     justifyItems:'center',
                     backgroundColor: '#087e94',
+                    width:'200px',
                     fontSize:'16px',
                     lineHeight:'2',
                     borderRadius :'12px',
@@ -64,7 +65,7 @@ export function HomeAbout() {
             </div> 
           </div>       
 <div 
-  className="text-center bg-[#cccccc] p-2 mt-2 mb-2 font-ProximaNovaRegular w-full md:w-3/5 mx-auto"
+  className="text-center bg-[#cccccc] p-2 mt-2 mb-2 font-ProximaNovaRegular w-full md:w-4/5 mx-auto"
   style={{color:'#3d3d3d', fontWeight:'bold', fontSize:'18px', lineHeight:'1.667'}}
 >
 Toponima <span style={{color:'#087e94'}}>is aimed at exploring the rich history and hidden meanings behind

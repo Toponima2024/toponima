@@ -15,48 +15,32 @@ Giovanni Tazza. Photography by Agustina Isidori`;
 
 
   return (
-    <footer className="bg-white bottom-0 w-full flex items-center justify-center shadow-lg p-5 mt-5">
-      <div className="w-4/5 ">
+    <footer style={{backgroundColor:'#f1f1f1'}} className="bg-white bottom-0 w-full left-0 flex items-center justify-center shadow-lg mb-1 mt-5">
+      <div className="w-4/5 mb-2">
         <div className="grid grid-cols-12 gap-2">
-          <div className="col-span-10" style={{color:'black'}}>
-          <Typography className="font-ProximaNovaRegular" 
-            style={{
-              fontSize:'12px',
-              paddingLeft:'15px',
-              paddingRight:'15px'
-              }}>
-            {textToponima}
-          </Typography>
-          </div>
-          <div className="col-span-2">
-            <ul>
-              <li>
-                <Link to="/about/home">
-                  <button type="button" className="flex items-center" style={{marginBottom:'5px'}}>
-                        <img src="/img/about.svg"    alt="exploreImage" width={10}  />
-                        <span style={{color:'#00000099', fontSize:'0.75rem', marginLeft:'5px'}}>About</span>
-                  </button>
-                </Link></li>
-              <li><Link to="/explore/home">
-                <button type="button" className="flex items-center" style={{marginBottom:'5px'}}>
-                        <img src="/img/explore_home.svg"  alt="exploreImage" width={10}  />
-                        <span style={{color:'#00000099', fontSize:'0.75rem', marginLeft:'5px'}}>Explore</span>
+          <div className="col-span-12 flex items-center justify-center mt-2 space-x-20 ">
+              <Link to="/explore/home">
+                <button type="button" className="flex flex-col  items-center" style={{marginBottom:'5px'}}>
+                        <img src="/img/explore_home.svg"  alt="exploreImage" width={20}  />
+                        <span style={{color:'#00000099', fontSize:'0.75rem'}}>Explore</span>
                   </button>
               
-              </Link></li>
-              <li><Link to="/collections/home">
-                <button type="button" className="flex items-center" style={{marginBottom:'5px'}}>
-                        <img src="/img/collections.svg"  alt="exploreImage" width={10}  />
-                        <span style={{color:'#00000099', fontSize:'0.75rem', marginLeft:'5px'}}>Collections</span>
+              </Link>
+              <Link to="/collections/home">
+                <button type="button" className="flex flex-col items-center" style={{marginBottom:'5px'}}>
+                        <img src="/img/collections.svg"  alt="exploreImage" width={20}  />
+                        <span style={{color:'#00000099', fontSize:'0.75rem'}}>Collections</span>
                   </button>
 
-              </Link></li>
-            </ul>
+              </Link>
+              <Link to="/about/home">
+                  <button type="button" className="flex flex-col items-center" style={{marginBottom:'5px'}}>
+                        <img src="/img/about.svg"    alt="exploreImage" width={20}  />
+                        <span style={{color:'#00000099', fontSize:'0.75rem'}}>About</span>
+                  </button>
+                </Link>
           </div>
-          <div style={{paddingLeft:'10%', paddingRight:'10%'}} className="col-span-12" >
-            <hr  className="border-t-4 border-gray-400" />
-          </div>
-          <div className="col-span-10" style={{color:'black'}}>
+          <div className="col-span-12 md:col-span-10" style={{color:'black'}}>
           <Typography className="font-ProximaNovaRegular" 
             style={{
               fontSize:'12px', 
@@ -66,7 +50,7 @@ Giovanni Tazza. Photography by Agustina Isidori`;
             {textCopy}
           </Typography>
           </div>
-          <div className="flex flex items-center justify-center col-span-2">
+          <div className="flex flex items-center justify-center col-span-12 md:col-span-2">
             <img src="/img/facebook.svg" height={25} width={25} alt="exploreImage" className="mr-4" />
             <img src="/img/instagram.svg" height={25} width={25}  alt="exploreImage" className="mr-4" />
             <img src="/img/x.svg" height={25} width={25}  alt="exploreImage" className="mr-4" />
