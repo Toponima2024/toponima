@@ -41,7 +41,7 @@ export function HomeCollection() {
           {/* Contenido de la columna derecha */}
           <div className="flex flex-col items-center justify-center h-full text-center">            
               <Typography  style={{color:'#3d3d3d', fontSize:'40px', lineHeight:'1'}} className="mb-4 font-ProximaNovaRegular">
-                Meaningful Names.<br/> Meaninful Places.
+                Meaningful Names.<br/> Meaningful Places.
               </Typography>
               <span className="font-ProximaNovaRegular"
                 style={{
