@@ -36,6 +36,7 @@ function StoryDetail() {
 
     useEffect(() => {
         fetchStory(id);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }, [id])
   
   if(!story) return <LoadingSpinner />  

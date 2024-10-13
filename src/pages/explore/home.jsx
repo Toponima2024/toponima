@@ -18,8 +18,8 @@ export function Home() {
   const [stories, setStories] = useState([]);
   const [collections, setCollections] = useState([])
   const [positions, setPositions] = useState([])
-  
-  
+  // const { pathname } = useLocation();
+ 
   const fetchStories = async () => {      
     await getDocs(collection(db, "story"))
       .then((querySnapshot)=>{               
@@ -41,7 +41,8 @@ export function Home() {
   useEffect(() => { 
       fetchStories();
       fetchCollections();
-      
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
     }, []);
 
     useEffect(() => {

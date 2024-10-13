@@ -9,6 +9,11 @@ import {  Link } from "react-router-dom";
        
 
 export function HomeAbout() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  }, [])
+  
   return (
     <div className="container mx-auto">     
           <div className="grid grid-cols-1 mx-auto"> 

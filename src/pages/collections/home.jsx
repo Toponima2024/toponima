@@ -28,7 +28,8 @@ export function HomeCollection() {
 
   useEffect(()=>{
     fetchPost();
-    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   if(collections.length === 0 ) return <LoadingSpinner />  
