@@ -89,7 +89,7 @@ function StoryDetail() {
                   }
                 }
                 >
-                  Go To Collections
+                  Go To Explore
                 </Button>
               </Link>
           </div> 
