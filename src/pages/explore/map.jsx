@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useRef } from 'react'
 import mapboxgl, { Map, Marker, Popup } from 'mapbox-gl'
 
 import { MapContext, PlacesContext } from '@/context';
+import { Typography } from '@material-tailwind/react';
 
 function MapView({positions}) {
     const mapContainerRef = useRef()
@@ -57,16 +58,16 @@ function MapView({positions}) {
 
   return (
     <div className='container mt-5 mb-5' style={{backgroundColor: '#f0fafb', padding:'10px'}}>
-       <p>
+       <Typography className='font-FreightTextProBoldRegular mt-5 mb-5' style={{fontSize:'28px', lineHeight:'1.071', color:'#3d3d3d'}}>
        Pick a location on the map and find the story behind the name.
-       </p>
+       </Typography>
         <div 
             style={{ width: '100%', height: '50vh',  top: 0, left: 0 }}
             ref={mapContainerRef}
             />
-               <p>
+        <Typography className='font-ProximaNovaRegular text-center mt-2' style={{fontSize:'20px', color:'#3d3d3d', lineHeight:'1.5' }}>
                Explore the stories and find the meaning behind the name.
-       </p>
+        </Typography>
     </div>
   )
 }
