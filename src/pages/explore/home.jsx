@@ -11,7 +11,7 @@ import { db } from "../../fb";
 import { useState, useEffect } from "react";
 import StoryCard from "./storycard";
 import LoadingSpinner from "@/widgets/loading/LoadingSpinner";
-import Map from "./map";
+import MapView from "./map";
 
 
 export function Home() {
@@ -115,7 +115,10 @@ export function Home() {
           </div>   
       </div>
       <ConceptPage />
-      <Map positions={positions}/>
+      {
+        positions && (<MapView positions={positions}/>)
+      }
+      
       <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {

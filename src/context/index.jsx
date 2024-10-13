@@ -83,3 +83,8 @@ export const setFixedNavbar = (dispatch, value) =>
   dispatch({ type: "FIXED_NAVBAR", value });
 export const setOpenConfigurator = (dispatch, value) =>
   dispatch({ type: "OPEN_CONFIGURATOR", value });
+
+export { PlacesContext } from "./places/PlacesContext";
+export { PlacesProvider } from "./places/PlacesProvider";
+export { MapContext } from "./map/MapContext";
+export { MapProvider } from "./map/MapProvider";
