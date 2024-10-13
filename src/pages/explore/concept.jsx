@@ -1,5 +1,6 @@
-import { Avatar, Card } from '@material-tailwind/react'
+import { Card } from '@material-tailwind/react'
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const conceptInfoDerecha = [
   {
@@ -47,7 +48,12 @@ function ConceptPage() {
             {
               conceptInfoDerecha.map(concept => (
                 <div key={concept.id} className='flex items-center gap-4  my-4'>
-                  <img src={concept.img} alt={concept.title} className='w-8 h-8' />
+                                <Link to={`/about/home#${concept.id}`}>
+                <button type="button" className="flex flex-col  items-center" style={{marginBottom:'5px'}}>
+                <img src={concept.img} alt={concept.title} className='w-8 h-8' />
+                  </button>
+              
+              </Link>
                   <h1>{concept.title}</h1>
                 </div>
               ))
@@ -57,7 +63,12 @@ function ConceptPage() {
             {
               conceptInfoIzquierda.map(concept => (
                 <div key={concept.id} className='flex items-center gap-4 my-4'>
-                  <img src={concept.img} alt={concept.title} className='w-8 h-8' />
+                                                  <Link to={`/about/home#${concept.id}`}>
+                <button type="button" className="flex flex-col  items-center" style={{marginBottom:'5px'}}>
+                <img src={concept.img} alt={concept.title} className='w-8 h-8' />
+                  </button>
+              
+              </Link>
                   <h1>{concept.title}</h1>
                 </div>
               ))

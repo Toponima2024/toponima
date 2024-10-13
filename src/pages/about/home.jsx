@@ -9,11 +9,21 @@ import {  Link } from "react-router-dom";
        
 
 export function HomeAbout() {
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  // useEffect(() => {
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
 
-  }, [])
-  
+  // }, [])
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.substring(1); // Quita el símbolo "#"
+      const elemento = document.getElementById(id);
+      if (elemento) {
+        elemento.scrollIntoView({ behavior: 'smooth' });
+      }else{
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+  }, []);
   return (
     <div className="container mx-auto">     
           <div className="grid grid-cols-1 mx-auto"> 

@@ -45,7 +45,7 @@ import {
   export function AboutCard({id}) {
     const cardInfo = aboutInfoCards.find((card) => card.id === id);
     return (
-      <Card className="w-full max-w-[26rem] shadow-lg">
+      <Card id={id} className="w-full max-w-[26rem] shadow-lg">
         <CardHeader floated={false} color="blue-gray">
           <img
             src={cardInfo.imgUrl}
