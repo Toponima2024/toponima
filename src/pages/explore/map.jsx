@@ -49,7 +49,7 @@ function MapView({positions}) {
         setMap(map)
       }
 
-    }, [isLoading])
+    }, [isLoading,positions])
 
     if(isLoading){
       return (<h1>Loading...</h1>)
