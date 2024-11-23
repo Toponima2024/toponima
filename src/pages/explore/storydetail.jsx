@@ -145,13 +145,13 @@ function StoryDetail() {
           
           <a
             onClick={() => swipeImg("prv")}
-            className="bg-green rounded-full ml-2 hover:translate-x-2 transition-all ease-linear cursor-pointer"
+            className="bg-[#087e94] rounded-full ml-2 hover:translate-x-2 transition-all ease-linear cursor-pointer"
           >
               <IconButton
                 variant="text"
                 color="blue-gray"
               >
-              <ChevronLeftIcon strokeWidth={2.5} className="h-5 w-5" style={{color:'white', backgroundColor:'green', borderRadius:'50%', padding:'1px', height:'30px', width:'30px'}} />
+              <ChevronLeftIcon strokeWidth={2.5} className="h-5 w-5" style={{color:'white', backgroundColor:'#087e94', borderRadius:'50%', padding:'1px', height:'30px', width:'30px'}} />
             </IconButton>
             </a>
             <div>
@@ -164,13 +164,13 @@ function StoryDetail() {
           </div>
             <a
             onClick={() => swipeImg("nxt")}
-            className="bg-green rounded-full mr-2 hover:-translate-x-2 transition-all ease-linear cursor-pointer"
+            className="bg-[#087e94] rounded-full mr-2 hover:-translate-x-2 transition-all ease-linear cursor-pointer"
           >
               <IconButton
                 variant="text"
                 color="blue-gray"
               >
-              <ChevronRightIcon strokeWidth={2.5} className="h-5 w-5" style={{color:'white', backgroundColor:'green', borderRadius:'50%', padding:'1px', height:'30px', width:'30px'}} />
+              <ChevronRightIcon strokeWidth={2.5} className="h-5 w-5" style={{color:'white', backgroundColor:'#087e94', borderRadius:'50%', padding:'1px', height:'30px', width:'30px'}} />
             </IconButton>
             </a>
                     </div>
