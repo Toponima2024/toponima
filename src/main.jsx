@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "@material-tailwind/react";
 import { MapProvider, MaterialTailwindControllerProvider, PlacesProvider } from "@/context";
 import "../public/css/tailwind.css";
+import { AuthProvider } from "./context/auth/AuthContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -13,7 +14,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <MaterialTailwindControllerProvider>
           <PlacesProvider >
             <MapProvider>
-              <App />
+              <AuthProvider>
+                 <App />
+              </AuthProvider>
             </MapProvider>
           </PlacesProvider>
         </MaterialTailwindControllerProvider>

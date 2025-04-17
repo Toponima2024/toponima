@@ -22,6 +22,10 @@ import {
   setFixedNavbar,
 } from "@/context";
 
+import {
+  ArrowRightOnRectangleIcon,
+} from "@heroicons/react/24/outline";
+
 // className="rounded-none py-1.5 px-3 text-sm font-normal text-blue-gray-700 hover:bg-blue-500 hover:text-white focus:bg-blue-500 focus:text-white"
 
 function formatNumber(number, decPlaces) {
@@ -114,6 +118,14 @@ export function Configurator() {
             <img src="/img/about.svg"  alt="exploreImage" width={20} />
           </ListItemPrefix>
           About
+        </ListItem>
+      </Link>
+      <Link to="/auth/sign-in"  onClick={() => setOpenConfigurator(dispatch, false)}>
+        <ListItem >
+          <ListItemPrefix>
+           <ArrowRightOnRectangleIcon strokeWidth={2} className="h-4 w-4" />
+          </ListItemPrefix>
+          Login
         </ListItem>
       </Link>
       <ListItem >

@@ -11,6 +11,8 @@ import { SignIn, SignUp } from "@/pages/auth";
 import { HomeCollection } from "@/pages/collections";
 import { HomeAbout } from "@/pages/about";
 import StoryDetail from "./pages/explore/storydetail";
+import EditStory from "./pages/explore/editstory";
+import StoryList from "./pages/auth/story-list";
 
 const icon = {
   className: "w-5 h-5 text-inherit",
@@ -44,6 +46,12 @@ export const routes = [
         path: "/story/:id",
         element: <StoryDetail />,
       },
+      {
+        icon: <InformationCircleIcon {...icon} />,
+        name: "story edit",
+        path: "/edit/:id",
+        element: <EditStory />,
+      },
     ],
   },
   {
@@ -61,6 +69,12 @@ export const routes = [
         name: "sign up",
         path: "/sign-up",
         element: <SignUp />,
+      },
+      {
+        icon: <RectangleStackIcon {...icon} />,
+        name: "Story List",
+        path: "/story-list",
+        element: <StoryList />,
       },
     ],
   },
