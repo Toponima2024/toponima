@@ -3,18 +3,20 @@ import {
   Card,
   Input,
   Checkbox,
+  Alert ,
   Button,
   Typography,
 } from "@material-tailwind/react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import {   BuildingLibraryIcon,} from "@heroicons/react/24/outline";
 
 
 export function SignIn() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('');
-
+  const [success, setSuccess] = useState(true);
   const onSubmit = async (e) => {
     e.preventDefault()
     console.log("email", email);
@@ -26,7 +28,7 @@ export function SignIn() {
           email: userCredential.user.email,
           name: 'Admin Toponyma',
         };
-      // setSuccess(true);
+       setSuccess(true);
       window.location.href = "/auth/story-list"; // Replace "/dashboard" with the desired path
         // ...
     })
@@ -44,6 +46,19 @@ export function SignIn() {
         <div className="text-center">
           <Typography variant="h2" className="font-bold mb-4">Sign In</Typography>
           <Typography variant="paragraph" color="blue-gray" className="text-lg font-normal">Enter your email and password to Sign In.</Typography>
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "20px", marginBottom: "20px" }}>
+          <Link to="/"  >
+            <BuildingLibraryIcon strokeWidth={2.5} className="h-5 w-5" />
+        </Link>
+          </div>
+          {
+            !success && (
+              <Alert color="red" className="mb-4">
+                Authentication error.
+              </Alert>
+            )
+          }
+
         </div>
         <form className="mt-8 mb-2 mx-auto w-80 max-w-screen-lg lg:w-1/2">
           <div className="mb-1 flex flex-col gap-6">

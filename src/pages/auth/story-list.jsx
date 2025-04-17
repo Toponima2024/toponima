@@ -228,7 +228,7 @@ export function StoryList() {
         )}
     </div> */}
       <Dialog open={open} handler={handleOpen} size="xxl">
-        <DialogHeader>Toponym Histroies</DialogHeader>
+        <DialogHeader>Toponym Histories</DialogHeader>
         <DialogBody>
           <EditStory id={selectedId}/>
         </DialogBody>

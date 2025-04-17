@@ -24,6 +24,7 @@ import {  Link } from "react-router-dom";
 import ExpandableContent from './expandablecontent';
 import LoadingSpinner from '@/widgets/loading/LoadingSpinner';
 import RecordForm from './RecordForm';
+import LocationForm from './LocationForm';
 
 
 function EditStory({id}) {
@@ -45,7 +46,7 @@ function EditStory({id}) {
         else setSelectedImg(selectedImg + 1);
       }
     };
-
+    console.log("story", story);
     const InfoTab = ({ story, collections }) => (
       <div>
         <RecordForm recordToEdit={{
@@ -60,9 +61,18 @@ function EditStory({id}) {
     
     const LocationsTab = ({ story }) => (
       <div>
-        <h2>Locations</h2>
-        <p>Locations content here...</p>
-      </div>
+        <h2>Locations {story.toponym}</h2>
+        <div>
+        <LocationForm recordToEdit={{
+          latitude: story.position.latitude,
+          longitude: story.position.longitude,
+          marker: story.marker,
+          mainImage: story.mainImage,
+          id: story.id,
+          toponym: story.toponym,
+        } } />
+      </div>     
+     </div>
     );
     
     const ImagesTab = ({ story }) => (
